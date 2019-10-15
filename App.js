@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {} from 'react-native';
 
 import ListItems from './src/components/ListItems';
 
