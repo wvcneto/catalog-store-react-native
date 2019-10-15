@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
-import {ScrollView} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import Axios from 'axios';
 
 import Items from './Items';
+
+const Style = StyleSheet.create({
+  listView: {
+    backgroundColor: '#ddd',
+  },
+});
 
 class ListItems extends Component {
   constructor(props) {
@@ -26,7 +32,7 @@ class ListItems extends Component {
   render() {
     //console.log('Renderizando!');
     return (
-      <ScrollView>
+      <ScrollView style={Style.listView}>
         {this.state.listItems.map(item => {
           return <Items key={item.titulo} item={item} />;
         })}
